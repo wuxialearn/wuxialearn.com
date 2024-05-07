@@ -1,84 +1,59 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-body{
-	font-family: Arial, Helvetica, sans-serif;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-.main{
-	padding: 10px;
-	display: flex;
-	flex:2;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: column;
-}
-.footer{
-	flex: 0;
-	padding: 30px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	flex-direction: column;
-}
-.screenshots{
-	display: flex;
-	gap: 15px;
-}
-.badges{
-	padding: 5px;
-	display: flex;
-	gap: 5px;
-	align-items: center;
-}
-</style>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="wuxialearn">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>wuxialearn</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "612008523";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-	<div class  = "main">
-		<div>
-		<p>Wuxialearn - Learn Chinese</p>
-		</div>
-		<div>
-		Wuxialearn is an open source Chinese language learning app. (<a href = "https://github.com/wuxialearn/Wuxialearn">github</a>)
-		</div>
-		<div class = "badges">
-		<a href = "https://play.google.com/store/apps/details?id=com.wuxialearn.wuxialearn">
-			<img src="https://github.com/wuxialearn/assets/blob/main/google-play-badge.png?raw=true"
-		  alt='Get it on Google Play'
-		  height="60">
-		</a>
-		
-		<a href = "https://apps.apple.com/om/app/wuxia-learn-learn-chinese/id6478085787">
-			<img src="https://raw.githubusercontent.com/wuxialearn/assets/main/appstore-badge.png"
-		  alt='Get it on App Store'
-		  height="60">
-		</a>
-		</div>
-		<div class = "screenshots">
-			<img src="https://github.com/wuxialearn/assets/blob/main/home%20screen.png?raw=true"
-				  alt='home screen'
-				  height="450">
-
-			<img src="https://github.com/wuxialearn/assets/blob/main/basic%20game%20screen.png?raw=true"
-				  alt='game screen'
-				  height="450">
-
-			<img src="https://github.com/wuxialearn/assets/blob/main/stats%20screen.png?raw=true"
-				  alt='stats screen'
-				  height="450">
-
-			<img src="https://github.com/wuxialearn/assets/blob/main/sentence%20game%20screen.png?raw=true"
-				  alt='sentence game screen'
-				  height="450">
-		</div>
-		<div>
-		<p>For any issues or comments go to <a href = "https://github.com/wuxialearn/issues">https://github.com/wuxialearn/issues</a></p>
-		</div>
-	</div>
-	<div class  = "footer">
-	Wuxialearn LLC
-	</div>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
